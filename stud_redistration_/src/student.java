@@ -12,19 +12,22 @@ import java.util.Scanner;
         private String name;
         private int year;
         private int age;
+        private int ID;
         private String course=" courses_u_registered_for_this_semister";
         private static double cgpa ;
 
-        public Student(String name, int age,double cgpa ,int year) {
+        public Student(String name, int age ,int ID,double cgpa ,int year) {
             this.name = name;
             this.age = age;
             this.year=year;
             this.cgpa =cgpa;
+            this.ID=ID;
         }
 
         public String getName() {return name;}
         public int getAge() {return age;}
         public int getYear(){return year;}
+        public int getID(){return ID;}
         public static double  getcgpa() {
 
             if (cgpa <1 || cgpa >4) {
@@ -73,8 +76,10 @@ import java.util.Scanner;
 
 
                 System.out.println("cpga: " + Student.getcgpa());
-                System.out.println("-----------------------");
+
+                System.out.println("ID: " + student.getID());
                 System.out.println("year:" + student.getYear());
+                System.out.println("-----------------------");
             }
         }
     }
@@ -104,10 +109,12 @@ import java.util.Scanner;
                         //  String course = scanner.next();
                         System.out.print("Enter student cgpa: ");
                         double cgpa = scanner.nextDouble();
+                        System.out.print("enter your id: ");
+                        int ID = scanner.nextInt();
                         System.out.print("Enter year : ");
                         int year = scanner.nextInt();
 
-                        Student student = new Student(name,  age , cgpa ,  year);
+                        Student student = new Student(name,  age , ID ,cgpa,  year);
                         registration.registerStudent(student);
                         break;
                     case 2:
