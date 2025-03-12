@@ -105,7 +105,7 @@ import java.util.Scanner;
 
                         System.out.print("Enter student age: ");
                         int age = scanner.nextInt();
-                        // System.out.print("Enter student course: ");
+                         System.out.print("Enter student course: ");
                         //  String course = scanner.next();
                         System.out.print("Enter student cgpa: ");
                         double cgpa = scanner.nextDouble();
